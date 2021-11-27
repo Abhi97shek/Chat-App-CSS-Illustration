@@ -5,7 +5,7 @@ body
     padding: 0;
     box-sizing: border-box;
     font-family: 'Rubik', sans-serif;
-    overflow: hidden;
+   
 }
 .container
 {
@@ -14,6 +14,7 @@ body
     grid-template-columns: 25% 25% 25% 25% ;
     background-color: #fafafa;
     position: relative;
+    overflow: hidden;
 }
 
 .color_background_main
@@ -127,6 +128,7 @@ ion-icon {
     padding-left: .7rem;
 }
 
+
 .message-left
 {
   
@@ -136,8 +138,35 @@ ion-icon {
     border-top-right-radius: 12px;
     border-top-left-radius: 12px;
     border-bottom-left-radius:7px ;
+    
+    
 }
 
+.animate-1
+{
+    animation: moveRight 2s ease-in-out;
+}
+.animate-2
+{
+    animation: moveRight 2s ease-in-out;
+    animation-delay: 2s;
+}
+@keyframes moveRight {
+
+    0%
+    {
+        transform: translateX(-100px);
+       
+    }
+  
+    100%
+    {
+        
+        transform: translateX(0);
+      
+    }
+    
+}
 .message-left p
 {
     font-size: 12px;
@@ -148,6 +177,9 @@ ion-icon {
 .dog_images
 {
     display: flex;
+    justify-content: end;
+    gap:10px;
+    padding-right: .5rem;
 }
 
 .dog_images img
@@ -161,9 +193,11 @@ ion-icon {
 {
     background-color: white;
     width: 11.6rem;
+    margin-left: auto;
     border-bottom-right-radius: 12px;
     border-top-right-radius: 12px;
     border-top-left-radius: 12px;
+    margin-right: .5rem;
     border-bottom-left-radius:7px ;
 }
 
@@ -290,4 +324,75 @@ ion-icon {
     border-top-right-radius: 20rem;
    margin-right: -8rem;
    
+}
+
+
+@media only screen and (max-width:375px){
+
+    .container
+{
+    height:100vh;
+    display: grid;
+    grid-template-columns: 25% 50%;
+    background-color: #fafafa;
+    position: relative;
+    overflow: scroll;
+    grid-template-rows: 50% 50%;
+}
+
+.booking_text
+{
+    text-align: center;
+    display:block;
+    margin-top: 20rem;
+    position: relative;
+    right: 0;
+    width: 74%;
+    width: 276px;
+    margin-left: 58px;
+}
+.booking_text h1{
+    font-size: 2.2rem;
+}
+
+.booking_text p{
+    font-size: 14px;
+}
+
+.last
+{
+    width: 17rem;
+}   
+
+.background_color_right-bottom
+{
+    margin-top: 10rem;
+}
+
+.mobile_container
+{
+    padding-top: 1rem;
+}
+}
+
+@media only screen and (max-width:320px)
+{
+
+    .container
+    {
+       
+    }
+    .mobile
+    {
+        width: 17rem;
+    }
+
+    .booking_text
+    {
+        margin-left: 25px;
+    }
+    .last
+    {
+        width: 15rem;
+    }
 }
